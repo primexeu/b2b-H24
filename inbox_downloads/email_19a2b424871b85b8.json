@@ -1,0 +1,379 @@
+{
+  "gmail": {
+    "id": "19a2b424871b85b8",
+    "subject": "Glasplatte, Kaufvertrag 448265",
+    "from": "Primex Presentation <primexpresentation@gmail.com>",
+    "date": "Tue, 28 Oct 2025 15:38:59 +0100",
+    "attachments": {
+      "images": [
+        "inbox_downloads\\19a2b424871b85b8\\unnamed.jpg",
+        "inbox_downloads\\19a2b424871b85b8\\Screenshot_1.png"
+      ],
+      "pdfs": []
+    }
+  },
+  "processed": {
+    "email_freeform": {
+      "language": "de",
+      "request_types": [
+        "price_quote",
+        "missing_part",
+        "damage_claim"
+      ],
+      "has_product_images": true,
+      "ab_numbers": [
+        "64147"
+      ],
+      "purchase_orders": [
+        "448265"
+      ],
+      "articles": [
+        {
+          "article_no": "VC-A6SOTSVC",
+          "program": "Solea",
+          "variant": null
+        },
+        {
+          "article_no": "A6SOTS081",
+          "program": "Solea",
+          "variant": null
+        }
+      ],
+      "claimed_parts": [
+        {
+          "part_reference": 24,
+          "quantity": 1,
+          "notes": "Glasscheibe der Vitrine ist gebrochen"
+        },
+        {
+          "part_reference": null,
+          "quantity": 1,
+          "notes": "Griff an der linken Glastür des Highboards fehlt"
+        }
+      ],
+      "issue_summary": "Kundin meldet eine gebrochene Glasscheibe an der Vitrine (Teil 24) und einen fehlenden Griff an der linken Glastür des Highboards. Anfrage nach Preis für Ersatzglas.",
+      "contact": {
+        "name": null,
+        "company": null,
+        "phone": "0XXXX-XXX-XXX",
+        "email": null,
+        "address": null
+      }
+    },
+    "pdfs": [],
+    "unified_case": {
+      "summary": "Die Kundin meldet eine gebrochene Glasplatte in der Vitrine (Teil 24) sowie einen fehlenden Griff an der linken Glastür des Highboards. Die Glasplatte zeigt einen deutlichen Bruch, der auf einen Stoß hindeutet, während der fehlende Griff ein einfacher Fehlteil ist.",
+      "entities": {
+        "ab_numbers": [
+          "64147"
+        ],
+        "purchase_orders": [
+          "448265"
+        ],
+        "articles": [
+          {
+            "article_no": "VC-A6SOTSVC",
+            "source": "email"
+          },
+          {
+            "article_no": "A6SOTS081",
+            "source": "email"
+          }
+        ]
+      },
+      "per_claim_analysis": [
+        {
+          "part_reference": 24,
+          "quantity": 1,
+          "article_no": "VC-A6SOTSVC",
+          "assembly_check": {
+            "status": "found",
+            "comment": "✅ Teil 24 (Glass Shelf, strukturell) in der Vitrine VC-A6SOTSVC gefunden; entspricht der Beschreibung 'Glasscheibe der Vitrine'."
+          },
+          "image_check": {
+            "status": "consistent",
+            "observation": "Das Foto zeigt eine Vitrine mit einer mittleren Glasplatte, die deutlich gesprungen ist. Der Schaden ist klar erkennbar und betrifft die Glasfläche."
+          },
+          "damage_assessment": {
+            "verdict": "customer_damage",
+            "justification": "Die Kundin gibt an, dass die Glasscheibe 'kaputt gegangen' ist, ohne Hinweis auf Transportschaden. Der Bruch weist auf einen Stoß oder Druck nach der Montage hin."
+          },
+          "part_verdict": "rejected"
+        },
+        {
+          "part_reference": null,
+          "quantity": 1,
+          "article_no": "A6SOTS081",
+          "assembly_check": {
+            "status": "found",
+            "comment": "✅ Griff (Plastic handle piece, fitting, part_reference 159138) im Assembly-Plan des Highboards A6SOTS081 vorhanden; entspricht der Beschreibung 'fehlender Griff an der linken Glastür'."
+          },
+          "image_check": {
+            "status": "consistent",
+            "observation": "Das Foto des Highboards zeigt an der linken Glastür keinen Griff, während auf der rechten Seite ein Griff vorhanden ist. Fehlteil ist eindeutig erkennbar."
+          },
+          "damage_assessment": {
+            "verdict": "production_defect",
+            "justification": "Der Griff fehlt bereits bei Lieferung, kein Hinweis auf Beschädigung oder Verlust durch den Kunden. Typischer Produktions- oder Verpackungsfehler."
+          },
+          "part_verdict": "approved"
+        }
+      ],
+      "overall_image_consistency": "consistent",
+      "overall_verdict": "partially_approved",
+      "confidence": 0.95,
+      "recommended_action": "Ersatzgriff (Teil 159138) kostenfrei nachliefern. Für die gebrochene Glasplatte (Teil 24) handelt es sich um Kundenschaden – daher kein kostenfreier Ersatz; Preisangebot für Ersatzglas anfordern und der Kundin mitteilen.",
+      "_meta": {
+        "assembly_data_used": {
+          "A6SOTS081": {
+            "article_no": "A6SOTS081",
+            "aliases": [
+              "SOLEA 081",
+              "SOT S081",
+              "A6SOTS081"
+            ],
+            "parts": [
+              {
+                "part_reference": 41,
+                "description": "Top/Bottom panel",
+                "type": "structural"
+              },
+              {
+                "part_reference": 42,
+                "description": "Side panel",
+                "type": "structural"
+              },
+              {
+                "part_reference": 43,
+                "description": "Center divider panel",
+                "type": "structural"
+              },
+              {
+                "part_reference": 44,
+                "description": "Shelf, adjustable",
+                "type": "structural"
+              },
+              {
+                "part_reference": 45,
+                "description": "Shelf, small",
+                "type": "structural"
+              },
+              {
+                "part_reference": 46,
+                "description": "Door panel, with mirror",
+                "type": "structural"
+              },
+              {
+                "part_reference": 47,
+                "description": "Door panel, side",
+                "type": "structural"
+              },
+              {
+                "part_reference": 48,
+                "description": "Door panel, side with mirror",
+                "type": "structural"
+              },
+              {
+                "part_reference": 49,
+                "description": "Back panel",
+                "type": "structural"
+              },
+              {
+                "part_reference": 50,
+                "description": "Door, center with mirror",
+                "type": "structural"
+              },
+              {
+                "part_reference": 51,
+                "description": "Top rail",
+                "type": "structural"
+              },
+              {
+                "part_reference": 52,
+                "description": "Bottom rail",
+                "type": "structural"
+              },
+              {
+                "part_reference": 53,
+                "description": "Handle strip",
+                "type": "structural"
+              },
+              {
+                "part_reference": 123894,
+                "description": "Cam lock fitting Ø15x12,5",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 1018,
+                "description": "Wooden dowel Ø8x28",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 127314,
+                "description": "Shelf support bracket",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 1289,
+                "description": "Cam lock screw",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 1290,
+                "description": "Shelf support pin",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 23515,
+                "description": "Hinge plate",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 1415,
+                "description": "BackPlate",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 1302,
+                "description": "Plastic bracket",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 11809,
+                "description": "Connecting screw L-11mm",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 18785,
+                "description": "Eccentric cam",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 1060,
+                "description": "Wood screw UP Ø4x16",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 1013,
+                "description": "Wood screw UP Ø4x25",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 1056,
+                "description": "Wood screw UP Ø3x20",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 24179,
+                "description": "Wood screw Ø4x22",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 1011,
+                "description": "Countersunk screw US Ø3,5x13",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 143031,
+                "description": "Cover cap Ø20",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 1267,
+                "description": "Wall mounting bracket",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 21887,
+                "description": "Hinge arm Ø35 KR 0",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 22311,
+                "description": "Hinge arm Ø35 KR 8",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 116795,
+                "description": "Soft close damper",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 159138,
+                "description": "Plastic handle piece",
+                "type": "fitting"
+              },
+              {
+                "part_reference": 1005,
+                "description": "Plastic foot",
+                "type": "fitting"
+              }
+            ]
+          },
+          "VC-A6SOTSVC": {
+            "article_no": "VC-A6SOTSVC",
+            "aliases": [
+              "Solea VC-A6SOTSVC",
+              "SOTSVC",
+              "VC-A6SOTSVC"
+            ],
+            "parts": [
+              {
+                "part_reference": 17,
+                "description": "Top cover / top panel"
+              },
+              {
+                "part_reference": 18,
+                "description": "Base panel / bottom plinth"
+              },
+              {
+                "part_reference": 19,
+                "description": "Side panel (left)"
+              },
+              {
+                "part_reference": 20,
+                "description": "Side panel (right)"
+              },
+              {
+                "part_reference": 21,
+                "description": "Center divider / vertical panel"
+              },
+              {
+                "part_reference": 22,
+                "description": "A panel no glass"
+              },
+              {
+                "part_reference": 23,
+                "description": "Bottom door panel (plain)"
+              },
+              {
+                "part_reference": 24,
+                "description": "Glass Shelf"
+              },
+              {
+                "part_reference": 25,
+                "description": "Shelf panel (small)"
+              },
+              {
+                "part_reference": 26,
+                "description": "Center slatted decorative strip"
+              },
+              {
+                "part_reference": 27,
+                "description": "Base foot / support board"
+              },
+              {
+                "part_reference": 28,
+                "description": "Upper door panel with glass insert"
+              },
+              {
+                "part_reference": 29,
+                "description": "Door handle (plastic)"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

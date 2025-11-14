@@ -1,0 +1,191 @@
+{
+  "gmail": {
+    "id": "19a250061c5c5206",
+    "subject": "RKL TEST 14.08.2025 / Ersatzteil (Kundenreklamation) - Bestellnummer: 4400154065",
+    "from": "Primex Presentation <primexpresentation@gmail.com>",
+    "date": "Mon, 27 Oct 2025 10:29:17 +0100",
+    "attachments": {
+      "images": [],
+      "pdfs": [
+        "inbox_downloads\\19a250061c5c5206\\ATT59127_7_.pdf"
+      ]
+    }
+  },
+  "processed": {
+    "email_freeform": {
+      "language": "de",
+      "request_types": [
+        "missing_part"
+      ],
+      "has_product_images": false,
+      "ab_numbers": [],
+      "purchase_orders": [
+        "4400154065",
+        "4500169211"
+      ],
+      "articles": [],
+      "claimed_parts": [],
+      "issue_summary": "Ersatzteilbestellung im Rahmen einer Kundenreklamation für Bestellung 4400154065. Home24 bittet um kostenlose Lieferung und Auftragsbestätigung mit Liefertermin.",
+      "contact": {
+        "name": null,
+        "company": "home24 elogistics GmbH & Co. K",
+        "phone": null,
+        "email": "ersatzteile@home24.de",
+        "address": "Orionstraße 16, 06116 Halle (Saale)"
+      }
+    },
+    "pdfs": [
+      {
+        "pdf_path": "inbox_downloads\\19a250061c5c5206\\ATT59127_7_.pdf",
+        "extracted_json": {
+          "vendor": "Bestellung 4400154065",
+          "vendor_address": "Forestdream Möbelagentur GmbH & Co.\nDatum 21.07.2025\nKG\nUnsere USt.-IdNr.: DE266182271\nWeddigenufer 2\nOrdermanager Spare Parts EDI\n32052 Herford\nTelefon -\nE-Mail ersatzteile@home24.de\nLieferanten ID: 100143",
+          "deliver_to": "Telefon\nhome24 elogistics GmbH & Co. KG E-Mail\nOrionstraße 16\n06116 Halle (Saale)",
+          "order_number": "4400154065",
+          "order_date": "2025-07-21",
+          "vat_id": "DE266182271",
+          "supplier_id": "100143",
+          "email": "ersatzteile@home24.de",
+          "original_article_no": "A6ARST081",
+          "spare_part_description": "je 2x 6 und 2x 24",
+          "reason": "Beschädigt",
+          "image_urls": [
+            "https://cdn1.home24.net/reclamation/attach/original/33ae8067-3185-4ff1-b42e-321f5c1d67e1/100/2e8037ec-184e-4059-9494-bc4e7049f235.jpg",
+            "https://cdn1.home24.net/reclamation/attach/original/33ae8067-3185-4ff1-b42e-321f5c1d67e1/100/697ae689-cc3b-488d-8b52-fdc994e07f5a.jpg",
+            "https://cdn1.home24.net/reclamation/attach/original/33ae8067-3185-4ff1-b42e-321f5c1d67e1/100/791efdfb-1f1f-44cc-9849-3d0d131b9d43.jpg"
+          ],
+          "ean": "2050001811141",
+          "dimensions": "100x60x20 CM",
+          "weight": "12",
+          "qty": "1",
+          "unit": "Colli",
+          "original_po": "4500169211",
+          "claimed_parts": [
+            {
+              "part_reference": 6,
+              "quantity": 2
+            },
+            {
+              "part_reference": 24,
+              "quantity": 2
+            }
+          ],
+          "raw_text_sample": "Seite 1 von 2\nBestellung\nFirma\nBestellung 4400154065\nForestdream Möbelagentur GmbH & Co.\nDatum 21.07.2025\nKG\nUnsere USt.-IdNr.: DE266182271\nWeddigenufer 2\nOrdermanager Spare Parts EDI\n32052 Herford\nTelefon -\nE-Mail ersatzteile@home24.de\nLieferanten ID: 100143\nLiefern Sie an\nTelefon\nhome24 elogistics GmbH & Co. KG E-Mail\nOrionstraße 16\n06116 Halle (Saale)\nPos. Hersteller Bezeichnung Artikelnr. Menge Einh. Colli Liefer\nArtikelnr. EAN Abmessung Gewicht woche\n10 je 2x 6 und 2x 24 7000140442 1 ST 1 25/32\nEAN: 2050001811141 100x60x20 CM 12 KG\nOriginal-PO:4500169211\nOriginal Article-No. A6ARST081\nSpare Part Description: je 2x 6 und 2x 24\nGrund: Beschädigt\nFoto\nhttps://cdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/2e8037\nec-184e-4059-9494-bc4e7049f235.jpg\nhttps://cdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/697ae6\n89-cc3b-488d-8b52-fdc994e07f5a.jpg\nhttps://cdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/791efdf\nb-1f1f-44cc-9849-3d0d131b9d43.jpg\nGesamt\n1 ST 1\nAuftragsbestätigung:\nBitte schicken Sie uns eine Auftragsbestätigung innerhalb von 48 Stunden mit dem geplanten Liefertermin und\nder bestätigten Anzahl. Nutzen Sie dafür EDI oder das Webportal von IWOfurn und nur in Ausnahmefällen\nunsere E-Mail: ersatzteile@home24.de.\nhome24 SE Vorstand: Marc Appelhoff (Vorsitzender), Philipp\nOtto-Ostrowski-Str. 3 Steinhäuser\nDE-10249 Berlin Vorsitzender des Aufsichtsrates: Matth",
+          "full_text": "Seite 1 von 2\nBestellung\nFirma\nBestellung 4400154065\nForestdream Möbelagentur GmbH & Co.\nDatum 21.07.2025\nKG\nUnsere USt.-IdNr.: DE266182271\nWeddigenufer 2\nOrdermanager Spare Parts EDI\n32052 Herford\nTelefon -\nE-Mail ersatzteile@home24.de\nLieferanten ID: 100143\nLiefern Sie an\nTelefon\nhome24 elogistics GmbH & Co. KG E-Mail\nOrionstraße 16\n06116 Halle (Saale)\nPos. Hersteller Bezeichnung Artikelnr. Menge Einh. Colli Liefer\nArtikelnr. EAN Abmessung Gewicht woche\n10 je 2x 6 und 2x 24 7000140442 1 ST 1 25/32\nEAN: 2050001811141 100x60x20 CM 12 KG\nOriginal-PO:4500169211\nOriginal Article-No. A6ARST081\nSpare Part Description: je 2x 6 und 2x 24\nGrund: Beschädigt\nFoto\nhttps://cdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/2e8037\nec-184e-4059-9494-bc4e7049f235.jpg\nhttps://cdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/697ae6\n89-cc3b-488d-8b52-fdc994e07f5a.jpg\nhttps://cdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/791efdf\nb-1f1f-44cc-9849-3d0d131b9d43.jpg\nGesamt\n1 ST 1\nAuftragsbestätigung:\nBitte schicken Sie uns eine Auftragsbestätigung innerhalb von 48 Stunden mit dem geplanten Liefertermin und\nder bestätigten Anzahl. Nutzen Sie dafür EDI oder das Webportal von IWOfurn und nur in Ausnahmefällen\nunsere E-Mail: ersatzteile@home24.de.\nhome24 SE Vorstand: Marc Appelhoff (Vorsitzender), Philipp\nOtto-Ostrowski-Str. 3 Steinhäuser\nDE-10249 Berlin Vorsitzender des Aufsichtsrates: Matthias Ley\nEingetragen beim Amtsgericht Berlin (Charlottenburg)\nHRB 196337 B, Sitz Berlin\nSeite 2 von 2\nFirma Bestellnummer 4400154065\nForestdream Möbelagentur GmbH & Co.\nKG Datum 21.07.2025\nWeddigenufer 2\n32052 Herford\nEs handelt sich um eine Kundenreklamation - deshalb bestellen wir die Ersatzteile kostenlos.\nAvisierung:\nBitte setzen Sie sich zwecks Avisierung rechtzeitig mit unserem Avisierungsteam in Verbindung oder avisieren\nSie die Sendung im Leogistics Portal.\nE-Mail: lageravisierung@home24.de\nhome24 SE Vorstand: Marc Appelhoff (Vorsitzender), Philipp\nOtto-Ostrowski-Str. 3 Steinhäuser\nDE-10249 Berlin Vorsitzender des Aufsichtsrates: Matthias Ley\nEingetragen beim Amtsgericht Berlin (Charlottenburg)\nHRB 196337 B, Sitz Berlin"
+        }
+      }
+    ],
+    "unified_case": {
+      "summary": "Kundenreklamation für Artikel A6ARST081 (Bestellung 4400154065) mit beschädigten Türfronten unten (Teil 6) und rechtem Seitenpanel (Teil 24). Beide Teile sind in der Montagezeichnung vorhanden und zeigen laut Fotos sichtbare Beschädigungen, die auf Transportschaden hindeuten.",
+      "entities": {
+        "ab_numbers": [],
+        "purchase_orders": [
+          "4400154065",
+          "4500169211"
+        ],
+        "articles": [
+          {
+            "article_no": "A6ARST081",
+            "source": "pdf"
+          }
+        ]
+      },
+      "per_claim_analysis": [
+        {
+          "part_reference": 6,
+          "quantity": 2,
+          "article_no": "A6ARST081",
+          "assembly_check": {
+            "status": "found",
+            "comment": "✅ Teil 6 (untere Türfronten, große Paneele, strukturell) in der Montagezeichnung von Artikel A6ARST081 gefunden. Entspricht der Beschreibung 'je 2x 6 und 2x 24' und passt zur Reklamation beschädigter Frontteile."
+          },
+          "image_check": {
+            "status": "consistent",
+            "observation": "Die Fotos zeigen beschädigte Frontpaneele mit sichtbaren Kanten- und Oberflächenbrüchen, was mit der Angabe 'beschädigt' übereinstimmt."
+          },
+          "damage_assessment": {
+            "verdict": "transport_damage",
+            "justification": "Der Kunde gibt 'Beschädigt' an, und die Fotos zeigen Stoßschäden an den Kanten, typisch für Transportschäden. Kein Hinweis auf Montagefehler oder Eigenverschulden."
+          },
+          "part_verdict": "approved"
+        },
+        {
+          "part_reference": 24,
+          "quantity": 2,
+          "article_no": "A6ARST081",
+          "assembly_check": {
+            "status": "found",
+            "comment": "✅ Teil 24 (rechtes Seitenpanel, strukturell) in der Montagezeichnung von Artikel A6ARST081 gefunden. Entspricht der Ersatzteilanforderung 'je 2x 6 und 2x 24'."
+          },
+          "image_check": {
+            "status": "consistent",
+            "observation": "Auf den Fotos sind auch größere Paneele mit sichtbaren Stoß- und Druckstellen erkennbar, was auf Beschädigung während des Transports hindeutet."
+          },
+          "damage_assessment": {
+            "verdict": "transport_damage",
+            "justification": "Die Beschädigungen an den Kanten und Oberflächen deuten auf Stoßeinwirkung hin, was typisch für Transportschäden ist. Keine Hinweise auf Produktionsfehler oder unsachgemäße Montage."
+          },
+          "part_verdict": "approved"
+        }
+      ],
+      "overall_image_consistency": "consistent",
+      "overall_verdict": "approved_in_full",
+      "confidence": 0.95,
+      "recommended_action": "Ersatzteile (2x Teil 6 und 2x Teil 24) kostenlos gemäß Kundenreklamation liefern. Auftragsbestätigung mit Liefertermin innerhalb von 48 Stunden an ersatzteile@home24.de senden. Ursache als Transportschaden dokumentieren.",
+      "_meta": {
+        "assembly_data_used": {
+          "A6ARST081": {
+            "article_no": "A6ARST081",
+            "aliases": [
+              "ARTONA 081",
+              "ARST081",
+              "A6ARST081"
+            ],
+            "parts": [
+              {
+                "part_reference": 20,
+                "description": "Top & bottom boards (corpus)"
+              },
+              {
+                "part_reference": 23,
+                "description": "Center divider panel"
+              },
+              {
+                "part_reference": 24,
+                "description": "Right side panel"
+              },
+              {
+                "part_reference": 35,
+                "description": "Left side panel"
+              },
+              {
+                "part_reference": 36,
+                "description": "Legs / base feet set"
+              },
+              {
+                "part_reference": 37,
+                "description": "Base reinforcement rail / stretcher"
+              },
+              {
+                "part_reference": 38,
+                "description": "Shelves (adjustable)"
+              },
+              {
+                "part_reference": 39,
+                "description": "Upper door fronts (narrow panels, with mirror/ornament)"
+              },
+              {
+                "part_reference": 40,
+                "description": "Horizontal door handles"
+              },
+              {
+                "part_reference": 6,
+                "description": "Lower door fronts (large panels)"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

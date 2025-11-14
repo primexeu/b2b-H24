@@ -1,0 +1,191 @@
+{
+  "gmail": {
+    "id": "19a24d34bb52e3d9",
+    "subject": "Ersatzteil (Kundenreklamation) - Bestellnummer: 4400154065",
+    "from": "Endrit Thaqi <01primex.eu@gmail.com>",
+    "date": "Mon, 27 Oct 2025 09:40:04 +0100",
+    "attachments": {
+      "images": [],
+      "pdfs": [
+        "inbox_downloads\\19a24d34bb52e3d9\\ATT59127_PART_QE_NUK_EKZISTON.pdf"
+      ]
+    }
+  },
+  "processed": {
+    "email_freeform": {
+      "language": "de",
+      "request_types": [
+        "missing_part"
+      ],
+      "has_product_images": false,
+      "ab_numbers": [],
+      "purchase_orders": [
+        "4400154065",
+        "4500169211"
+      ],
+      "articles": [],
+      "claimed_parts": [],
+      "issue_summary": "Kundenreklamation mit Ersatzteilbestellung für Bestellnummer 4400154065. Home24 bittet um kostenlose Lieferung der Ersatzteile und um Auftragsbestätigung mit Liefertermin.",
+      "contact": {
+        "name": null,
+        "company": "home24 elogistics GmbH & Co. K",
+        "phone": null,
+        "email": "ersatzteile@home24.de",
+        "address": "Orionstraße 16, 06116 Halle (Saale)"
+      }
+    },
+    "pdfs": [
+      {
+        "pdf_path": "inbox_downloads\\19a24d34bb52e3d9\\ATT59127_PART_QE_NUK_EKZISTON.pdf",
+        "extracted_json": {
+          "vendor": "Bestellung 4400154065",
+          "vendor_address": "XXXX GmbH & Co. KG\nDatum 21.07.2025\nAddress\nUnsere USt.-IdNr.: DExxxxxx\nOrdermanager Spare Parts EDI\nTelefon -\nE-Mail someone@gmail.com\nLieferanten ID: 100143",
+          "deliver_to": "Telefon\nYYYYY GmbH & Co. KG E-Mail\nAddress",
+          "order_number": "4400154065",
+          "order_date": "2025-07-21",
+          "vat_id": null,
+          "supplier_id": "100143",
+          "email": "someone@gmail.com",
+          "original_article_no": "A6ARST081",
+          "spare_part_description": "je 2x 53 und 2x 24",
+          "reason": "Beschädigt",
+          "image_urls": [
+            "https://cdn1.home24.net/reclamation/attach/original/33ae8067-3185-4ff1-b42e-321f5c1d67e1/100/2e8037ec-184e-4059-9494-bc4e7049f235.jpg",
+            "https://cdn1.home24.net/reclamation/attach/original/33ae8067-3185-4ff1-b42e-321f5c1d67e1/100/697ae689-cc3b-488d-8b52-fdc994e07f5a.jpg",
+            "https://cdn1.home24.net/reclamation/attach/original/33ae8067-3185-4ff1-b42e-321f5c1d67e1/100/791efdfb-1f1f-44cc-9849-3d0d131b9d43.jpg"
+          ],
+          "ean": "2050001811141",
+          "dimensions": "100x60x20 CM",
+          "weight": "12",
+          "qty": "1",
+          "unit": "Colli",
+          "original_po": "4500169211",
+          "claimed_parts": [
+            {
+              "part_reference": 24,
+              "quantity": 2
+            },
+            {
+              "part_reference": 53,
+              "quantity": 2
+            }
+          ],
+          "raw_text_sample": "Seite 1 von 2\nBestellung\nFirma\nBestellung 4400154065\nXXXX GmbH & Co. KG\nDatum 21.07.2025\nAddress\nUnsere USt.-IdNr.: DExxxxxx\nOrdermanager Spare Parts EDI\nTelefon -\nE-Mail someone@gmail.com\nLieferanten ID: 100143\nLiefern Sie an\nTelefon\nYYYYY GmbH & Co. KG E-Mail\nAddress\nPos. Hersteller Bezeichnung Artikelnr. Menge Einh. Colli Liefer\nArtikelnr. EAN Abmessung Gewicht woche\n10 je 2x 53 und 2x 24 7000140442 1 ST 1 25/32\nEAN: 2050001811141 100x60x20 CM 12 KG\nOriginal-PO: 4500169211\nOriginal Article-No. A6ARST081\nSpare Part Description: je 2x 53 und 2x 24\nGrund: Beschädigt\nFoto https://cdn1.home24.net/reclamation/attach/\noriginal/3 3ae8067-3185-4ff1-\nb42e-321f5c1d67e1/100/2e8037\nec-184e-4059-9494-bc4e7049f235.jpg https://\ncdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/697ae6\n89-cc3b-488d-8b52-fdc994e07f5a.jpg https://\ncdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/791efdf\nb-1f1f-44cc-9849-3d0d131b9d43.jpg\nGesamt\n1 ST 1\nAuftragsbestätigung:\nBitte schicken Sie uns eine Auftragsbestätigung innerhalb von 48 Stunden mit dem geplanten Liefertermin und\nder bestätigten Anzahl. Nutzen Sie dafür EDI oder das Webportal von IWOfurn und nur in Ausnahmefällen\nunsere E-Mail: someone@gmail.com\nYYYY Vorstand: xxxxxx\nAddress Vorsitzender des Aufsichtsrates: yyyy\nAddress\nSeite 2 von 2\nFirma Bestellnummer 4400154065\nXXXX GmbH & Co. KG\nAddress Datum 21.07.2025\nEs handelt sich um eine Kundenreklamation - deshalb bestellen wir d",
+          "full_text": "Seite 1 von 2\nBestellung\nFirma\nBestellung 4400154065\nXXXX GmbH & Co. KG\nDatum 21.07.2025\nAddress\nUnsere USt.-IdNr.: DExxxxxx\nOrdermanager Spare Parts EDI\nTelefon -\nE-Mail someone@gmail.com\nLieferanten ID: 100143\nLiefern Sie an\nTelefon\nYYYYY GmbH & Co. KG E-Mail\nAddress\nPos. Hersteller Bezeichnung Artikelnr. Menge Einh. Colli Liefer\nArtikelnr. EAN Abmessung Gewicht woche\n10 je 2x 53 und 2x 24 7000140442 1 ST 1 25/32\nEAN: 2050001811141 100x60x20 CM 12 KG\nOriginal-PO: 4500169211\nOriginal Article-No. A6ARST081\nSpare Part Description: je 2x 53 und 2x 24\nGrund: Beschädigt\nFoto https://cdn1.home24.net/reclamation/attach/\noriginal/3 3ae8067-3185-4ff1-\nb42e-321f5c1d67e1/100/2e8037\nec-184e-4059-9494-bc4e7049f235.jpg https://\ncdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/697ae6\n89-cc3b-488d-8b52-fdc994e07f5a.jpg https://\ncdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/791efdf\nb-1f1f-44cc-9849-3d0d131b9d43.jpg\nGesamt\n1 ST 1\nAuftragsbestätigung:\nBitte schicken Sie uns eine Auftragsbestätigung innerhalb von 48 Stunden mit dem geplanten Liefertermin und\nder bestätigten Anzahl. Nutzen Sie dafür EDI oder das Webportal von IWOfurn und nur in Ausnahmefällen\nunsere E-Mail: someone@gmail.com\nYYYY Vorstand: xxxxxx\nAddress Vorsitzender des Aufsichtsrates: yyyy\nAddress\nSeite 2 von 2\nFirma Bestellnummer 4400154065\nXXXX GmbH & Co. KG\nAddress Datum 21.07.2025\nEs handelt sich um eine Kundenreklamation - deshalb bestellen wir die Ersatzteile kostenlos.\nAvisierung:\nBitte setzen Sie sich zwecks Avisierung rechtzeitig mit unserem Avisierungsteam in Verbindung oder avisieren\nSie die Sendung im Leogistics Portal.\nE-Mail: someone@gmail.com\nYYYY Vorstand: xxxxxx\nAddress Vorsitzender des Aufsichtsrates: yyyy\nAddress"
+        }
+      }
+    ],
+    "unified_case": {
+      "summary": "Kundenreklamation für Artikel A6ARST081 (Bestellnummer 4400154065) mit beschädigten Seitenteilen (Teile 24 und 53). Teil 24 ist laut Montageplan vorhanden, Teil 53 nicht. Fotobeweise zeigen Beschädigungen an Holzpaneelen, was auf Transportschaden hindeutet.",
+      "entities": {
+        "ab_numbers": [],
+        "purchase_orders": [
+          "4400154065",
+          "4500169211"
+        ],
+        "articles": [
+          {
+            "article_no": "A6ARST081",
+            "source": "pdf"
+          }
+        ]
+      },
+      "per_claim_analysis": [
+        {
+          "part_reference": 24,
+          "quantity": 2,
+          "article_no": "A6ARST081",
+          "assembly_check": {
+            "status": "found",
+            "comment": "✅ Teil 24 (Right side panel, strukturelles Seitenteil) ist im Montageplan für Artikel A6ARST081 vorhanden und passt zur Beschreibung 'je 2x 53 und 2x 24'."
+          },
+          "image_check": {
+            "status": "consistent",
+            "observation": "Die Fotos zeigen beschädigte Holzpaneele mit Kantenbrüchen und Druckstellen, was mit einem beschädigten Seitenteil übereinstimmt."
+          },
+          "damage_assessment": {
+            "verdict": "transport_damage",
+            "justification": "Der angegebene Grund 'Beschädigt' und die sichtbaren Stoßschäden an den Paneelen deuten auf Transportschaden hin."
+          },
+          "part_verdict": "approved"
+        },
+        {
+          "part_reference": 53,
+          "quantity": 2,
+          "article_no": "A6ARST081",
+          "assembly_check": {
+            "status": "not_found",
+            "comment": "❌ Teil 53 ist im Montageplan für Artikel A6ARST081 nicht vorhanden. Möglicherweise handelt es sich um eine interne oder veraltete Referenznummer."
+          },
+          "image_check": {
+            "status": "insufficient_evidence",
+            "observation": "Die Fotos zeigen zwar beschädigte Paneele, aber keine eindeutige Zuordnung zu einem Teil 53 ist möglich."
+          },
+          "damage_assessment": {
+            "verdict": "unknown",
+            "justification": "Da Teil 53 im Montageplan nicht existiert und keine eindeutige visuelle Zuordnung möglich ist, kann die Schadensursache nicht sicher bestimmt werden."
+          },
+          "part_verdict": "pending_more_info"
+        }
+      ],
+      "overall_image_consistency": "partially_consistent",
+      "overall_verdict": "partially_approved",
+      "confidence": 0.82,
+      "recommended_action": "Ersatzlieferung für Teil 24 (2 Stück) freigeben, da Transportschaden plausibel und belegt ist. Für Teil 53 Rückfrage an Home24 stellen, um die korrekte Teilenummer oder Beschreibung zu klären, bevor Ersatz veranlasst wird.",
+      "_meta": {
+        "assembly_data_used": {
+          "A6ARST081": {
+            "article_no": "A6ARST081",
+            "aliases": [
+              "ARTONA 081",
+              "ARST081",
+              "A6ARST081"
+            ],
+            "parts": [
+              {
+                "part_reference": 20,
+                "description": "Top & bottom boards (corpus)"
+              },
+              {
+                "part_reference": 23,
+                "description": "Center divider panel"
+              },
+              {
+                "part_reference": 24,
+                "description": "Right side panel"
+              },
+              {
+                "part_reference": 35,
+                "description": "Left side panel"
+              },
+              {
+                "part_reference": 36,
+                "description": "Legs / base feet set"
+              },
+              {
+                "part_reference": 37,
+                "description": "Base reinforcement rail / stretcher"
+              },
+              {
+                "part_reference": 38,
+                "description": "Shelves (adjustable)"
+              },
+              {
+                "part_reference": 39,
+                "description": "Upper door fronts (narrow panels, with mirror/ornament)"
+              },
+              {
+                "part_reference": 40,
+                "description": "Horizontal door handles"
+              },
+              {
+                "part_reference": 6,
+                "description": "Lower door fronts (large panels)"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

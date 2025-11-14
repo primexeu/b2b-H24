@@ -1,0 +1,36 @@
+{
+  "vendor": "Bestellung 4400154065",
+  "vendor_address": "Forestdream Möbelagentur GmbH & Co.\nDatum 21.07.2025\nKG\nUnsere USt.-IdNr.: DE266182271\nWeddigenufer 2\nOrdermanager Spare Parts EDI\n32052 Herford\nTelefon -\nE-Mail ersatzteile@home24.de\nLieferanten ID: 100143",
+  "deliver_to": "Telefon\nhome24 elogistics GmbH & Co. KG E-Mail\nOrionstraße 16\n06116 Halle (Saale)",
+  "order_number": "4400154065",
+  "order_date": "2025-07-21",
+  "vat_id": "DE266182271",
+  "supplier_id": "100143",
+  "email": "ersatzteile@home24.de",
+  "original_article_no": "A6ARST081",
+  "spare_part_description": "je 2x 53 und 2x 24",
+  "reason": "Beschädigt",
+  "image_urls": [
+    "https://cdn1.home24.net/reclamation/attach/original/33ae8067-3185-4ff1-b42e-321f5c1d67e1/100/2e8037ec-184e-4059-9494-bc4e7049f235.jpg",
+    "https://cdn1.home24.net/reclamation/attach/original/33ae8067-3185-4ff1-b42e-321f5c1d67e1/100/697ae689-cc3b-488d-8b52-fdc994e07f5a.jpg",
+    "https://cdn1.home24.net/reclamation/attach/original/33ae8067-3185-4ff1-b42e-321f5c1d67e1/100/791efdfb-1f1f-44cc-9849-3d0d131b9d43.jpg"
+  ],
+  "ean": "2050001811141",
+  "dimensions": "100x60x20 CM",
+  "weight": "12",
+  "qty": "1",
+  "unit": "Colli",
+  "original_po": null,
+  "claimed_parts": [
+    {
+      "part_reference": 53,
+      "quantity": 2
+    },
+    {
+      "part_reference": 24,
+      "quantity": 2
+    }
+  ],
+  "raw_text_sample": "Seite 1 von 2\nBestellung\nFirma\nBestellung 4400154065\nForestdream Möbelagentur GmbH & Co.\nDatum 21.07.2025\nKG\nUnsere USt.-IdNr.: DE266182271\nWeddigenufer 2\nOrdermanager Spare Parts EDI\n32052 Herford\nTelefon -\nE-Mail ersatzteile@home24.de\nLieferanten ID: 100143\nLiefern Sie an\nTelefon\nhome24 elogistics GmbH & Co. KG E-Mail\nOrionstraße 16\n06116 Halle (Saale)\nPos. Hersteller Bezeichnung Artikelnr. Menge Einh. Colli Liefer\nArtikelnr. EAN Abmessung Gewicht woche\n10 je 2x 6 und 2x 24 7000140442 1 ST 1 25/32\nEAN: 2050001811141 100x60x20 CM 12 KG\nOriginal-PO:\nOriginal Article-No. A6ARST081\nSpare Part Description: je 2x 53 und 2x 24\nGrund: Beschädigt\nFoto https://cdn1.home24.net/reclamation/attach/\noriginal/3 3ae8067-3185-4ff1-\nb42e-321f5c1d67e1/100/2e8037\nec-184e-4059-9494-bc4e7049f235.jpg https://\ncdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/697ae6\n89-cc3b-488d-8b52-fdc994e07f5a.jpg https://\ncdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/791efdf\nb-1f1f-44cc-9849-3d0d131b9d43.jpg\nGesamt\n1 ST 1\nAuftragsbestätigung:\nBitte schicken Sie uns eine Auftragsbestätigung innerhalb von 48 Stunden mit dem geplanten Liefertermin und\nder bestätigten Anzahl. Nutzen Sie dafür EDI oder das Webportal von IWOfurn und nur in Ausnahmefällen\nunsere E-Mail: ersatzteile@home24.de.\nhome24 SE Vorstand: Marc Appelhoff (Vorsitzender), Philipp\nOtto-Ostrowski-Str. 3 Steinhäuser\nDE-10249 Berlin Vorsitzender des Aufsichtsrates: Matthias L",
+  "full_text": "Seite 1 von 2\nBestellung\nFirma\nBestellung 4400154065\nForestdream Möbelagentur GmbH & Co.\nDatum 21.07.2025\nKG\nUnsere USt.-IdNr.: DE266182271\nWeddigenufer 2\nOrdermanager Spare Parts EDI\n32052 Herford\nTelefon -\nE-Mail ersatzteile@home24.de\nLieferanten ID: 100143\nLiefern Sie an\nTelefon\nhome24 elogistics GmbH & Co. KG E-Mail\nOrionstraße 16\n06116 Halle (Saale)\nPos. Hersteller Bezeichnung Artikelnr. Menge Einh. Colli Liefer\nArtikelnr. EAN Abmessung Gewicht woche\n10 je 2x 6 und 2x 24 7000140442 1 ST 1 25/32\nEAN: 2050001811141 100x60x20 CM 12 KG\nOriginal-PO:\nOriginal Article-No. A6ARST081\nSpare Part Description: je 2x 53 und 2x 24\nGrund: Beschädigt\nFoto https://cdn1.home24.net/reclamation/attach/\noriginal/3 3ae8067-3185-4ff1-\nb42e-321f5c1d67e1/100/2e8037\nec-184e-4059-9494-bc4e7049f235.jpg https://\ncdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/697ae6\n89-cc3b-488d-8b52-fdc994e07f5a.jpg https://\ncdn1.home24.net/reclamation/attach/original/3\n3ae8067-3185-4ff1-b42e-321f5c1d67e1/100/791efdf\nb-1f1f-44cc-9849-3d0d131b9d43.jpg\nGesamt\n1 ST 1\nAuftragsbestätigung:\nBitte schicken Sie uns eine Auftragsbestätigung innerhalb von 48 Stunden mit dem geplanten Liefertermin und\nder bestätigten Anzahl. Nutzen Sie dafür EDI oder das Webportal von IWOfurn und nur in Ausnahmefällen\nunsere E-Mail: ersatzteile@home24.de.\nhome24 SE Vorstand: Marc Appelhoff (Vorsitzender), Philipp\nOtto-Ostrowski-Str. 3 Steinhäuser\nDE-10249 Berlin Vorsitzender des Aufsichtsrates: Matthias Ley\nEingetragen beim Amtsgericht Berlin (Charlottenburg)\nHRB 196337 B, Sitz Berlin\nSeite 2 von 2\nFirma Bestellnummer 4400154065\nForestdream Möbelagentur GmbH & Co.\nKG Datum 21.07.2025\nWeddigenufer 2\n32052 Herford\nEs handelt sich um eine Kundenreklamation - deshalb bestellen wir die Ersatzteile kostenlos.\nAvisierung:\nBitte setzen Sie sich zwecks Avisierung rechtzeitig mit unserem Avisierungsteam in Verbindung oder avisieren\nSie die Sendung im Leogistics Portal.\nE-Mail: lageravisierung@home24.de\nhome24 SE Vorstand: Marc Appelhoff (Vorsitzender), Philipp\nOtto-Ostrowski-Str. 3 Steinhäuser\nDE-10249 Berlin Vorsitzender des Aufsichtsrates: Matthias Ley\nEingetragen beim Amtsgericht Berlin (Charlottenburg)\nHRB 196337 B, Sitz Berlin"
+}

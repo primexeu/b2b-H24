@@ -1,0 +1,112 @@
+[
+    {
+      "article_no": "A6ARST081",
+      "aliases": ["ARTONA 081", "ARST081", "A6ARST081"],
+      "parts": [
+        { "part_reference": 20, "description": "Top & bottom boards (corpus)" },
+        { "part_reference": 23, "description": "Center divider panel" },
+        { "part_reference": 24, "description": "Right side panel" },
+        { "part_reference": 35, "description": "Left side panel" },
+        { "part_reference": 36, "description": "Legs / base feet set" },
+        { "part_reference": 37, "description": "Base reinforcement rail / stretcher" },
+        { "part_reference": 38, "description": "Shelves (adjustable)" },
+        { "part_reference": 39, "description": "Upper door fronts (narrow panels, with mirror/ornament)" },
+        { "part_reference": 40, "description": "Horizontal door handles" },
+        { "part_reference": 6,  "description": "Lower door fronts (large panels)" }
+      ]
+    },
+    {
+      "article_no": "A6SOTS081",
+      "aliases": ["SOLEA 081", "SOT S081", "A6SOTS081"],
+      "parts": [
+        {"part_reference": 41, "description": "Top/Bottom panel", "type": "structural"},
+        {"part_reference": 42, "description": "Side panel", "type": "structural"},
+        {"part_reference": 43, "description": "Center divider panel", "type": "structural"},
+        {"part_reference": 44, "description": "Shelf, adjustable", "type": "structural"},
+        {"part_reference": 45, "description": "Shelf, small", "type": "structural"},
+        {"part_reference": 46, "description": "Door panel, with mirror", "type": "structural"},
+        {"part_reference": 47, "description": "Door panel, side", "type": "structural"},
+        {"part_reference": 48, "description": "Door panel, side with mirror", "type": "structural"},
+        {"part_reference": 49, "description": "Back panel", "type": "structural"},
+        {"part_reference": 50, "description": "Door, center with mirror", "type": "structural"},
+        {"part_reference": 51, "description": "Top rail", "type": "structural"},
+        {"part_reference": 52, "description": "Bottom rail", "type": "structural"},
+        {"part_reference": 53, "description": "Handle strip", "type": "structural"},
+        {"part_reference": 123894, "description": "Cam lock fitting Ø15x12,5", "type": "fitting"},
+        {"part_reference": 1018, "description": "Wooden dowel Ø8x28", "type": "fitting"},
+        {"part_reference": 127314, "description": "Shelf support bracket", "type": "fitting"},
+        {"part_reference": 1289, "description": "Cam lock screw", "type": "fitting"},
+        {"part_reference": 1290, "description": "Shelf support pin", "type": "fitting"},
+        {"part_reference": 23515, "description": "Hinge plate", "type": "fitting"},
+        {"part_reference": 1415, "description": "BackPlate", "type": "fitting"},
+        {"part_reference": 1302, "description": "Plastic bracket", "type": "fitting"},
+        {"part_reference": 11809, "description": "Connecting screw L-11mm", "type": "fitting"},
+        {"part_reference": 18785, "description": "Eccentric cam", "type": "fitting"},
+        {"part_reference": 1060, "description": "Wood screw UP Ø4x16", "type": "fitting"},
+        {"part_reference": 1013, "description": "Wood screw UP Ø4x25", "type": "fitting"},
+        {"part_reference": 1056, "description": "Wood screw UP Ø3x20", "type": "fitting"},
+        {"part_reference": 24179, "description": "Wood screw Ø4x22", "type": "fitting"},
+        {"part_reference": 1011, "description": "Countersunk screw US Ø3,5x13", "type": "fitting"},
+        {"part_reference": 143031, "description": "Cover cap Ø20", "type": "fitting"},
+        {"part_reference": 1267, "description": "Wall mounting bracket", "type": "fitting"},
+        {"part_reference": 21887, "description": "Hinge arm Ø35 KR 0", "type": "fitting"},
+        {"part_reference": 22311, "description": "Hinge arm Ø35 KR 8", "type": "fitting"},
+        {"part_reference": 116795, "description": "Soft close damper", "type": "fitting"},
+        {"part_reference": 159138, "description": "Plastic handle piece", "type": "fitting"},
+        {"part_reference": 1005, "description": "Plastic foot", "type": "fitting"}
+      ]
+    },
+    {
+      "article_no": "VC-A6SOTSVC",
+      "aliases": ["Solea VC-A6SOTSVC", "SOTSVC", "VC-A6SOTSVC"],
+      "parts": [
+        { "part_reference": 17, "description": "Top cover / top panel" },
+        { "part_reference": 18, "description": "Base panel / bottom plinth" },
+        { "part_reference": 19, "description": "Side panel (left)" },
+        { "part_reference": 20, "description": "Side panel (right)" },
+        { "part_reference": 21, "description": "Center divider / vertical panel" },
+        { "part_reference": 22, "description": "A panel no glass" },
+        { "part_reference": 23, "description": "Bottom door panel (plain)" },
+        { "part_reference": 24, "description": "Glass Shelf" },
+        { "part_reference": 25, "description": "Shelf panel (small)" },
+        { "part_reference": 26, "description": "Center slatted decorative strip" },
+        { "part_reference": 27, "description": "Base foot / support board" },
+        { "part_reference": 28, "description": "Upper door panel with glass insert" },
+        { "part_reference": 29, "description": "Door handle (plastic)" }
+      ]
+    },
+    {
+      "article_no": "A6ARST085",
+      "aliases": ["ARTONA 085", "ARST085", "A6ARST085"],
+      "parts": [
+        {"part_reference": 17, "description": "Top panel"},
+        {"part_reference": 20, "description": "Bottom panel"},
+        {"part_reference": 23, "description": "Side panel"},
+        {"part_reference": 41, "description": "Back panel"},
+        {"part_reference": 42, "description": "Shelf"},
+        {"part_reference": 46, "description": "Door"},
+        {"part_reference": 48, "description": "Handle"},
+        {"part_reference": 49, "description": "Leg"},
+        {"part_reference": 50, "description": "Leg support"},
+        {"part_reference": 51, "description": "Drawer front"},
+        {"part_reference": 54, "description": "Drawer side"},
+        {"part_reference": 58, "description": "Drawer bottom"}
+      ]
+    },
+    {
+      "article_no": "28700042/11",
+      "aliases": ["SOLEA 003", "SOTS003", "A6SOTS003"],
+      "parts": [
+        { "part_reference": 74, "description": "Bottom base panel" },
+        { "part_reference": 75, "description": "Side panels (left and right)" },
+        { "part_reference": 76, "description": "Vertical dividers (internal partitions)" },
+        { "part_reference": 77, "description": "Rear reinforcement plinth / back base rail" },
+        { "part_reference": 78, "description": "Front decorative drawer front panel" },
+        { "part_reference": 79, "description": "Drawer side panels" },
+        { "part_reference": 80, "description": "Drawer back panel" },
+        { "part_reference": 81, "description": "Drawer bottom panel" },
+        { "part_reference": 82, "description": "Top cover panel" },
+        { "part_reference": 83, "description": "Back panel" }
+      ]
+    }  
+]

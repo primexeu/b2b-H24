@@ -1,0 +1,11 @@
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+python-dotenv
+pdfplumber
+openai
+pandas
+openpyxl
+pytz
+reportlab
+python-dateutil
