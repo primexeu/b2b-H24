@@ -1,0 +1,33 @@
+# Python cache / bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging / build artifacts
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Logs / coverage / tooling caches
+*.log
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+# Environment & secrets
+.env
+.env.*
+
+# IDE / OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

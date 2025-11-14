@@ -5566,5 +5566,39 @@
         "Lieferadresse": "N/A",
         "Produkt": "A6ARST081",
         "Urteil": "transport_damage"
+    },
+    {
+        "Datum": "14.11.2025",
+        "Bestellnummer": "448265",
+        "Kunde": "Y Möbel GmbH & Co.KG",
+        "Pos.": 1,
+        "Artikel / Service": "24",
+        "Artikelbezeichnung": "Glass Shelf",
+        "Menge": 1,
+        "BFQ - Ursache": "301 - Beschädigt",
+        "BFQ - Verursacher": "20 - Kunde",
+        "Wunsch-KW": "46. KW 2025",
+        "Bestätigungs-KW": "47. KW 2025",
+        "Rechnungsadresse": "Otto-Schott-Str. X, 47906 Kempen, Deutschland",
+        "Lieferadresse": "Otto-Schott-Str. X, 47906 Kempen, Deutschland",
+        "Produkt": "VC-A6SOTSVC",
+        "Urteil": "customer_damage"
+    },
+    {
+        "Datum": "14.11.2025",
+        "Bestellnummer": "448265",
+        "Kunde": "Y Möbel GmbH & Co.KG",
+        "Pos.": 2,
+        "Artikel / Service": "159138",
+        "Artikelbezeichnung": "Plastic handle piece",
+        "Menge": 1,
+        "BFQ - Ursache": "208 - Fehlteile",
+        "BFQ - Verursacher": "10 - Lieferant",
+        "Wunsch-KW": "46. KW 2025",
+        "Bestätigungs-KW": "47. KW 2025",
+        "Rechnungsadresse": "Otto-Schott-Str. X, 47906 Kempen, Deutschland",
+        "Lieferadresse": "Otto-Schott-Str. X, 47906 Kempen, Deutschland",
+        "Produkt": "A6SOTS081",
+        "Urteil": "production_defect"
     }
 ]

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Automation Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<main class="dashboard">
+    <header>
+        <div>
+            <p class="eyebrow">b2b-H24</p>
+            <h1>Mail Automation Control Room</h1>
+            <p class="subtitle">Run the Gmail OAuth flow and keep an eye on your worker-ready status.</p>
+        </div>
+        <div class="cta">
+            <a class="button primary" href="{{ url_for('start_auth') }}">Connect Gmail</a>
+            <small>Uses the client secret at <code>{{ secret_path }}</code></small>
+        </div>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <section class="alerts">
+                {% for category, msg in messages %}
+                    <div class="alert {{ category }}">{{ msg }}</div>
+                {% endfor %}
+            </section>
+        {% endif %}
+    {% endwith %}
+
+    <section class="status-panel">
+        {% if token %}
+            <div class="status success">
+                <h2>Ready!</h2>
+                <p>Authenticated as <strong>{{ token.email or "Gmail user" }}</strong>.</p>
+                <ul>
+                    <li>Token path: <code>{{ token.path }}</code></li>
+                    <li>Last updated: {{ token.updated_at }}</li>
+                    <li>Has refresh token: {{ "yes" if token.refresh_token else "no" }}</li>
+                </ul>
+            </div>
+        {% else %}
+            <div class="status warning">
+                <h2>No token yet</h2>
+                <p>Upload your <code>client_secret.json</code> and tap “Connect Gmail” to start the OAuth flow.</p>
+            </div>
+        {% endif %}
+    </section>
+
+    <section class="cards">
+        {% for card in cards %}
+            <article class="card">
+                <p class="card-label">{{ card.label }}</p>
+                <p class="card-value">{{ card.value }}</p>
+                <p class="card-hint">{{ card.hint }}</p>
+            </article>
+        {% endfor %}
+    </section>
+
+    <section class="footer-note">
+        <p>Once you see the “Ready” badge, deploy <code>gmail_watch_and_process.py</code> as a worker (same image, different command).</p>
+    </section>
+</main>
+</body>
+</html>
