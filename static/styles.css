@@ -176,9 +176,113 @@ small {
 .card-value {
     font-size: 1.8rem;
     margin: 0;
+    word-break: break-word;
 }
 
 .card-hint {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.watcher-panel,
+.settings-panel {
+    background: var(--panel);
+    border-radius: 20px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.watcher-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.watcher-panel h2,
+.settings-panel h2 {
+    margin: 0;
+}
+
+.watcher-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    color: var(--muted);
+}
+
+.watcher-meta dl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 0;
+}
+
+.watcher-meta dt {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(148, 163, 184, 0.9);
+}
+
+.watcher-meta dd {
+    margin: 0.2rem 0 0;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.watcher-event {
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px dashed rgba(56, 189, 248, 0.4);
+    color: var(--muted);
+}
+
+.watcher-event h3 {
+    margin: 0 0 0.2rem;
+}
+
+.settings-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.settings-form input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    background: rgba(15, 23, 42, 0.6);
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.settings-form button {
+    border: none;
+    cursor: pointer;
+}
+
+.watcher-panel .button.secondary {
+    background: rgba(148, 163, 184, 0.15);
+    color: var(--text);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.watcher-panel .button.secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.hint {
     color: var(--muted);
     margin: 0;
     font-size: 0.9rem;
