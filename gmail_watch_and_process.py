@@ -719,7 +719,8 @@ def main_loop():
                             approved_claims = [claim for claim in all_claims_analysis if claim.get("part_verdict") == "approved"]
                             all_parts_approved = len(all_claims_analysis) > 0 and len(all_claims_analysis) == len(approved_claims)
                             
-                            first_po = (unified.get("entities", {}).get("purchase_orders", ["N/A"]))[0]
+                            purchase_orders = unified.get("entities", {}).get("purchase_orders") or []
+                            first_po = purchase_orders[0] if purchase_orders else "N/A"
                             contact_info = email_struct.get("contact", {})
                             customer_name = contact_info.get("company") or contact_info.get("name") or "N/A"
                             customer_address = contact_info.get("address") or "N/A"
