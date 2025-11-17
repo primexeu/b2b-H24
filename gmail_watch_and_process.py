@@ -688,16 +688,31 @@ def main_loop():
             for mid in reversed(new_ids):
                 subject = ""
                 from_ = ""
+                sender_email: Optional[str] = None
                 last_internal_recipient = None
                 last_client_recipient = None
                 try:
                     subject, from_, date_, body_text, msg, headers_map, message_id, thread_id = get_email_meta_and_body(service, mid)
+                    sender_email = _extract_email_address(from_) or None
                     if (headers_map.get("x-primex-autoreply") or "").lower().startswith("claimsbot-"):
                         seen.add(mid); _save_seen_ids(seen)
-                        _record_email_event("completed", message_id=mid, subject=subject, sender=from_, note="Skipped autoreply loopback")
+                        _record_email_event(
+                            "completed",
+                            message_id=mid,
+                            subject=subject,
+                            sender=from_,
+                            sender_email=sender_email or from_,
+                            note="Skipped autoreply loopback",
+                        )
                         continue
                     
-                    _record_email_event("processing", message_id=mid, subject=subject, sender=from_)
+                    _record_email_event(
+                        "processing",
+                        message_id=mid,
+                        subject=subject,
+                        sender=from_,
+                        sender_email=sender_email or from_,
+                    )
 
                     pdfs, images = download_attachments(service, msg)
                     print(f"\n[Processing] {mid[:12]}… | imgs={len(images)} pdfs={len(pdfs)} | From: {from_} | Subj: {subject[:60].replace(os.linesep,' ')}")
@@ -752,6 +767,7 @@ def main_loop():
                             message_id=mid,
                             subject=subject,
                             sender=from_,
+                            sender_email=sender_email or from_,
                             internal_recipient=last_internal_recipient,
                             note="Requested additional product images",
                         )
@@ -787,6 +803,7 @@ def main_loop():
                             message_id=mid,
                             subject=subject,
                             sender=from_,
+                            sender_email=sender_email or from_,
                             internal_recipient=last_internal_recipient,
                             note="Requested AB/PO reference",
                         )
@@ -949,20 +966,23 @@ def main_loop():
 
                         except Exception as e:
                             print(f"❗️ Auto-reply or attachment generation error: {e}")
-                            _record_email_event("error", message_id=mid, subject=subject, sender=from_, note=f"Auto reply failed: {e}")
+                    _record_email_event("error", message_id=mid, subject=subject, sender=from_, sender_email=sender_email or from_, note=f"Auto reply failed: {e}")
 
                     if MARK_AS_READ: mark_as_read(service, mid)
+                    if not last_internal_recipient and sender_email:
+                        last_internal_recipient = sender_email
                     _record_email_event(
                         "completed",
                         message_id=mid,
                         subject=subject,
                         sender=from_,
+                        sender_email=sender_email or from_,
                         internal_recipient=last_internal_recipient,
                         client_recipient=last_client_recipient,
                     )
                 except Exception as message_error:
                     print(f"⚠️ Message processing error for {mid[:12]}: {message_error}")
-                    _record_email_event("error", message_id=mid, subject=subject, sender=from_, note=str(message_error))
+                    _record_email_event("error", message_id=mid, subject=subject, sender=from_, sender_email=sender_email or from_, note=str(message_error))
                 finally:
                     seen.add(mid); _save_seen_ids(seen)
             time.sleep(POLL_SECONDS)

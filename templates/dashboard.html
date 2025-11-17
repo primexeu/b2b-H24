@@ -97,14 +97,40 @@
         </div>
         {% if watcher.last_event %}
             <div class="watcher-event">
-                <h3>Last activity</h3>
-                <p>
-                    <strong>{{ watcher.last_event.type|capitalize }}</strong>
-                    {% if watcher.last_event.subject %} — {{ watcher.last_event.subject }}{% endif %}
-                    {% if watcher.last_event.sender %}<br>From: {{ watcher.last_event.sender }}{% endif %}
-                    {% if watcher.last_event.timestamp_display %}<br>at {{ watcher.last_event.timestamp_display }}{% endif %}
-                    {% if watcher.last_event.note %}<br>Note: {{ watcher.last_event.note }}{% endif %}
-                </p>
+                <div class="event-header">
+                    <span class="event-badge">{{ watcher.last_event.type|upper }}</span>
+                    <span class="event-time">{{ watcher.last_event.timestamp_display or "just now" }}</span>
+                </div>
+                {% if watcher.last_event.subject %}
+                    <p class="event-subject">{{ watcher.last_event.subject }}</p>
+                {% endif %}
+                {% if watcher.last_event.sender_email or watcher.last_event.sender %}
+                    <p class="event-meta">
+                        Incoming from
+                        <strong>{{ watcher.last_event.sender_email or watcher.last_event.sender }}</strong>
+                    </p>
+                {% endif %}
+                {% if watcher.last_event.internal_recipient %}
+                    <p class="event-meta">
+                        Internal reply → <strong>{{ watcher.last_event.internal_recipient }}</strong>
+                    </p>
+                {% elif watcher.last_event.sender_email %}
+                    <p class="event-meta">
+                        Internal reply → <strong>{{ watcher.last_event.sender_email }}</strong>
+                    </p>
+                {% endif %}
+                {% if watcher.last_event.client_recipient %}
+                    <p class="event-meta">
+                        Client-facing reply → <strong>{{ watcher.last_event.client_recipient }}</strong>
+                    </p>
+                {% endif %}
+                {% if watcher.last_event.note %}
+                    <p class="event-note">{{ watcher.last_event.note }}</p>
+                {% endif %}
+            </div>
+        {% else %}
+            <div class="watcher-event watcher-event--empty">
+                <p class="event-meta">No emails processed yet.</p>
             </div>
         {% endif %}
     </section>

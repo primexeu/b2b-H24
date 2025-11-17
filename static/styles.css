@@ -245,8 +245,45 @@ small {
     color: var(--muted);
 }
 
-.watcher-event h3 {
-    margin: 0 0 0.2rem;
+.watcher-event--empty {
+    border-style: solid;
+    text-align: center;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.event-badge {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.event-time {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.event-subject {
+    margin: 0.2rem 0 0.5rem;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.event-meta {
+    margin: 0.15rem 0;
+    color: var(--muted);
+}
+
+.event-note {
+    margin-top: 0.6rem;
+    color: var(--warning);
 }
 
 .settings-form {
