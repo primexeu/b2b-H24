@@ -59,6 +59,66 @@
         {% endfor %}
     </section>
 
+    <section class="watcher-panel">
+        <div class="watcher-header">
+            <div>
+                <h2>Watcher Session</h2>
+                <p>Status: <strong>{{ watcher.status }}</strong>{% if watcher.process_active %} • live{% else %} • idle{% endif %}</p>
+                <p>Time remaining: {{ watcher.time_remaining or "not running" }}</p>
+            </div>
+            <form method="post" action="{{ url_for('trigger_watcher') }}">
+                <button class="button secondary" type="submit" {% if watcher.process_active %}disabled{% endif %}>
+                    {% if watcher.process_active %}Session Running{% else %}Start {{ watcher.max_runtime or "3h" }} Session{% endif %}
+                </button>
+            </form>
+        </div>
+        <div class="watcher-meta">
+            <dl>
+                <div>
+                    <dt>Started at</dt>
+                    <dd>{{ watcher.started_at or "—" }}</dd>
+                </div>
+                <div>
+                    <dt>Scheduled stop</dt>
+                    <dd>{{ watcher.will_stop_at or "—" }}</dd>
+                </div>
+                <div>
+                    <dt>Last heartbeat</dt>
+                    <dd>{{ watcher.last_heartbeat or "—" }}</dd>
+                </div>
+                <div>
+                    <dt>Pending messages</dt>
+                    <dd>{{ watcher.pending_messages if watcher.pending_messages is not none else "—" }}</dd>
+                </div>
+            </dl>
+            <div class="watcher-dest">
+                <p>Client-facing replies currently go to <strong>{{ watcher.client_notification_to }}</strong>.</p>
+            </div>
+        </div>
+        {% if watcher.last_event %}
+            <div class="watcher-event">
+                <h3>Last activity</h3>
+                <p>
+                    <strong>{{ watcher.last_event.type|capitalize }}</strong>
+                    {% if watcher.last_event.subject %} — {{ watcher.last_event.subject }}{% endif %}
+                    {% if watcher.last_event.sender %}<br>From: {{ watcher.last_event.sender }}{% endif %}
+                    {% if watcher.last_event.timestamp_display %}<br>at {{ watcher.last_event.timestamp_display }}{% endif %}
+                    {% if watcher.last_event.note %}<br>Note: {{ watcher.last_event.note }}{% endif %}
+                </p>
+            </div>
+        {% endif %}
+    </section>
+
+    <section class="settings-panel">
+        <h2>Client Notification Email</h2>
+        <form method="post" action="{{ url_for('update_client_email') }}" class="settings-form">
+            <label for="client_notification_to">Send client-facing replies to</label>
+            <input id="client_notification_to" type="email" name="client_notification_to" value="{{ settings.client_notification_to }}" required>
+            <button class="button primary" type="submit">Update email</button>
+        </form>
+        <p class="hint">Internal replies still go back to the original Gmail thread.</p>
+    </section>
+
     <section class="footer-note">
         <p>Once you see the “Ready” badge, deploy <code>gmail_watch_and_process.py</code> as a worker (same image, different command).</p>
     </section>

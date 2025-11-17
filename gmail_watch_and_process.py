@@ -33,6 +33,8 @@ import claim_triage as CT
 # ---------------------------
 load_dotenv()
 
+BASE_DIR = Path(__file__).parent.resolve()
+
 SCOPES = [
     "https://www.googleapis.com/auth/gmail.modify",
     "https://www.googleapis.com/auth/gmail.send",
@@ -65,8 +67,11 @@ AUTO_REPLY = os.getenv("GMAIL_AUTO_REPLY", "1") not in ("0", "false", "False")
 REPLY_FROM_NAME = os.getenv("GMAIL_REPLY_FROM_NAME", "Claims Assistant")
 REPLY_SIGNATURE = os.getenv("GMAIL_REPLY_SIGNATURE", "—\nPrimex Claims Assistant")
 
-# --- NEW: fixed recipient for client-facing email
-CLIENT_NOTIFICATION_TO = "primexpresentation@gmail.com"
+# --- NEW: configurable recipient for client-facing email
+DEFAULT_CLIENT_NOTIFICATION_TO = os.getenv("CLIENT_NOTIFICATION_TO", "primexpresentation2025@gmail.com")
+SETTINGS_PATH = Path(os.getenv("APP_SETTINGS_PATH", SECRET_PATH.parent / "app_settings.json"))
+WATCHER_STATE_PATH = Path(os.getenv("WATCHER_STATE_PATH", BASE_DIR / "watcher_state.json"))
+WATCHER_MAX_RUNTIME_SECONDS = int(os.getenv("WATCHER_MAX_RUNTIME_SECONDS", str(3 * 60 * 60)))
 # --- END NEW ---
 
 # ---------------------------
@@ -230,6 +235,57 @@ def generate_confirmation_pdf(approved_claims: list, assembly_data_used: dict, c
     p.save()
     buffer.seek(0)
     return buffer
+
+
+# ---------------------------
+# Settings & state helpers
+# ---------------------------
+def load_app_settings() -> dict:
+    data: dict[str, Any] = {}
+    if SETTINGS_PATH.exists():
+        try:
+            data = json.loads(SETTINGS_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            data = {}
+    if not data.get("client_notification_to"):
+        data["client_notification_to"] = DEFAULT_CLIENT_NOTIFICATION_TO
+    return data
+
+
+def get_client_notification_to() -> str:
+    return load_app_settings().get("client_notification_to", DEFAULT_CLIENT_NOTIFICATION_TO)
+
+
+def _load_watcher_state() -> dict:
+    if WATCHER_STATE_PATH.exists():
+        try:
+            return json.loads(WATCHER_STATE_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+
+def _update_watcher_state(**updates):
+    state = _load_watcher_state()
+    state.update(updates)
+    state["updated_at"] = datetime.utcnow().isoformat()
+    WATCHER_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    tmp = WATCHER_STATE_PATH.with_suffix(".tmp")
+    tmp.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(WATCHER_STATE_PATH)
+
+
+def _heartbeat(queue_depth: Optional[int] = None):
+    payload = {"last_heartbeat": datetime.utcnow().isoformat()}
+    if queue_depth is not None:
+        payload["pending_messages"] = queue_depth
+    payload["client_notification_to"] = get_client_notification_to()
+    _update_watcher_state(**payload)
+
+
+def _record_email_event(event_type: str, **info):
+    event = {"type": event_type, "timestamp": datetime.utcnow().isoformat(), **info}
+    _update_watcher_state(last_event=event)
 
 
 # ---------------------------
@@ -594,26 +650,55 @@ def main_loop():
     service = get_service()
     seen = _load_seen_ids()
 
-    print(f"🔩 Assembly Data source: {CT.ASSEMBLY_DATA_JSON}")
-    print(f"👂 Listening for *new* emails… every {POLL_SECONDS}s")
+    runtime_limit = WATCHER_MAX_RUNTIME_SECONDS if WATCHER_MAX_RUNTIME_SECONDS > 0 else None
+    start_wall = datetime.utcnow()
+    start_monotonic = time.monotonic()
+    will_stop_at = start_wall + timedelta(seconds=runtime_limit) if runtime_limit else None
+    _update_watcher_state(
+        status="running",
+        pid=os.getpid(),
+        started_at=start_wall.isoformat(),
+        will_stop_at=will_stop_at.isoformat() if will_stop_at else None,
+        max_runtime_seconds=runtime_limit,
+        client_notification_to=get_client_notification_to(),
+    )
 
+    print(f"🔩 Assembly Data source: {CT.ASSEMBLY_DATA_JSON}")
+    limit_note = f" (auto-stops after {runtime_limit/3600:.1f}h)" if runtime_limit else ""
+    print(f"👂 Listening for *new* emails… every {POLL_SECONDS}s{limit_note}")
+
+    expired = False
     first_cycle = True
     while True:
+        if runtime_limit and time.monotonic() - start_monotonic >= runtime_limit:
+            print("⏲️ Max watcher runtime reached; stopping.")
+            expired = True
+            break
         try:
             ids = _list_message_ids(service, GMAIL_QUERY, MAX_RESULTS)
             if first_cycle and BASELINE_ON_START and ids:
                 print(f"⏭️  Baseline on start: recording {len(ids)} existing IDs as seen (skip them).")
+                _heartbeat(len(ids))
                 seen.update(ids); _save_seen_ids(seen); first_cycle = False; time.sleep(POLL_SECONDS); continue
             first_cycle = False
             new_ids = [mid for mid in ids if mid not in seen]
+            _heartbeat(len(new_ids))
             if new_ids: print(f"✨ {len(new_ids)} new email(s) detected")
 
             for mid in reversed(new_ids):
+                subject = ""
+                from_ = ""
+                last_internal_recipient = None
+                last_client_recipient = None
                 try:
                     subject, from_, date_, body_text, msg, headers_map, message_id, thread_id = get_email_meta_and_body(service, mid)
                     if (headers_map.get("x-primex-autoreply") or "").lower().startswith("claimsbot-"):
-                        seen.add(mid); _save_seen_ids(seen); continue
+                        seen.add(mid); _save_seen_ids(seen)
+                        _record_email_event("completed", message_id=mid, subject=subject, sender=from_, note="Skipped autoreply loopback")
+                        continue
                     
+                    _record_email_event("processing", message_id=mid, subject=subject, sender=from_)
+
                     pdfs, images = download_attachments(service, msg)
                     print(f"\n[Processing] {mid[:12]}… | imgs={len(images)} pdfs={len(pdfs)} | From: {from_} | Subj: {subject[:60].replace(os.linesep,' ')}")
                     
@@ -636,6 +721,8 @@ def main_loop():
                         print(f"❗️ No PDF and no relevant product images found for {mid[:12]}. Replying to request images.")
                         if AUTO_REPLY:
                             to_addr = _extract_email_address(from_)
+                            last_internal_recipient = to_addr
+                            last_internal_recipient = to_addr
                             if to_addr:
                                 reply_subject = f"Re: {subject}" if subject and not subject.lower().startswith("re:") else (subject or "Re: Your Inquiry")
                                 text_body = ("Guten Tag,\n\n"
@@ -659,7 +746,16 @@ def main_loop():
                                 send_reply_email(service, to_addr=to_addr, subject=reply_subject, thread_id=thread_id, in_reply_to_message_id=message_id, text_body=text_body, html_body=html_body)
                                 print(f"📧 Sent request for missing images to {to_addr}.")
                         if MARK_AS_READ: mark_as_read(service, mid)
-                        seen.add(mid); _save_seen_ids(seen); continue
+                        seen.add(mid); _save_seen_ids(seen)
+                        _record_email_event(
+                            "completed",
+                            message_id=mid,
+                            subject=subject,
+                            sender=from_,
+                            internal_recipient=last_internal_recipient,
+                            note="Requested additional product images",
+                        )
+                        continue
 
                     all_ab_numbers = email_struct.get("ab_numbers", [])
                     all_po_numbers = email_struct.get("purchase_orders", [])
@@ -685,7 +781,16 @@ def main_loop():
                                 send_reply_email( service, to_addr=to_addr, subject=reply_subject, thread_id=thread_id, in_reply_to_message_id=message_id, text_body=text_body, html_body=html_body )
                                 print(f"📧 Sent request for missing AB/PO number to {to_addr}.")
                         if MARK_AS_READ: mark_as_read(service, mid)
-                        seen.add(mid); _save_seen_ids(seen); continue
+                        seen.add(mid); _save_seen_ids(seen)
+                        _record_email_event(
+                            "completed",
+                            message_id=mid,
+                            subject=subject,
+                            sender=from_,
+                            internal_recipient=last_internal_recipient,
+                            note="Requested AB/PO reference",
+                        )
+                        continue
 
                     # --- Stage 3: Full Unified Analysis (only if checks passed) ---
                     unified = {}
@@ -700,10 +805,13 @@ def main_loop():
                     
                     if AUTO_REPLY and unified and unified.get("per_claim_analysis"):
                         to_addr = _extract_email_address(from_)
+                        last_internal_recipient = last_internal_recipient or to_addr
                         if not to_addr:
                            print(f"❗️ Could not extract a valid reply-to address from '{from_}'. Skipping replies.")
                            if MARK_AS_READ: mark_as_read(service, mid)
-                           seen.add(mid); _save_seen_ids(seen); continue
+                           seen.add(mid); _save_seen_ids(seen)
+                           _record_email_event("completed", message_id=mid, subject=subject, sender=from_, note="Missing reply-to address")
+                           continue
 
                         try:
                             # --- Define distinct subjects for internal and client emails ---
@@ -825,9 +933,11 @@ def main_loop():
                                     "filename": "Auftragsbestaetigung.pdf"
                                 })
 
+                            client_notification_to = get_client_notification_to()
+                            last_client_recipient = client_notification_to
                             send_reply_email(
                                 service,
-                                to_addr=CLIENT_NOTIFICATION_TO,
+                                to_addr=client_notification_to,
                                 subject=client_subject,
                                 thread_id=None,
                                 in_reply_to_message_id=None,
@@ -835,19 +945,40 @@ def main_loop():
                                 html_body=client_html,
                                 attachments=client_attachments
                             )
-                            print(f"📧 Sent client-facing email to {CLIENT_NOTIFICATION_TO} (Subject: {client_subject}).")
+                            print(f"📧 Sent client-facing email to {client_notification_to} (Subject: {client_subject}).")
 
                         except Exception as e:
                             print(f"❗️ Auto-reply or attachment generation error: {e}")
+                            _record_email_event("error", message_id=mid, subject=subject, sender=from_, note=f"Auto reply failed: {e}")
 
                     if MARK_AS_READ: mark_as_read(service, mid)
+                    _record_email_event(
+                        "completed",
+                        message_id=mid,
+                        subject=subject,
+                        sender=from_,
+                        internal_recipient=last_internal_recipient,
+                        client_recipient=last_client_recipient,
+                    )
+                except Exception as message_error:
+                    print(f"⚠️ Message processing error for {mid[:12]}: {message_error}")
+                    _record_email_event("error", message_id=mid, subject=subject, sender=from_, note=str(message_error))
                 finally:
                     seen.add(mid); _save_seen_ids(seen)
             time.sleep(POLL_SECONDS)
         except KeyboardInterrupt:
             print("\n👋 Exiting."); break
         except Exception as e:
-            print(f"❗️ Watcher error: {e}"); time.sleep(POLL_SECONDS)
+            print(f"❗️ Watcher error: {e}")
+            _record_email_event("error", error=str(e))
+            time.sleep(POLL_SECONDS)
+
+    final_status = "expired" if expired else "stopped"
+    _update_watcher_state(
+        status=final_status,
+        stopped_at=datetime.utcnow().isoformat(),
+        last_heartbeat=datetime.utcnow().isoformat(),
+    )
 
 if __name__ == "__main__":
     main_loop()
